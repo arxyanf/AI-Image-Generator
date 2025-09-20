@@ -1,0 +1,7 @@
+{
+  "taskType": "TEXT_IMAGE",
+  "textToImageParams": {
+    "text": "a cute cat",
+    "imageSize": "512x512"
+  }
+}
