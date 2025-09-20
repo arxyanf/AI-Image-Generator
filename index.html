@@ -1,0 +1,57 @@
+templates/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Generator</title>
+
+  <!-- Cute Favicon -->
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">🌙</button>
+
+  <div class="container">
+    <h1>AI Image Generator</h1>
+
+    <!-- Prompt Form -->
+    <form id="generateForm">
+      <input 
+        type="text" 
+        id="prompt" 
+        name="prompt" 
+        placeholder="Describe your image..." 
+        required
+      >
+
+      <!-- Cute Select Dropdown -->
+      <div class="select-wrapper">
+        <select id="model" name="model">
+          <option value="stability.sd3-5-large-v1:0">Stable Diffusion 3.5 Large</option>
+          <option value="amazon.titan-image-generator-v2:0">Amazon Titan v2</option>
+        </select>
+        <span class="arrow">▼</span>
+      </div>
+
+      <button type="submit">✨ Generate ✨</button>
+    </form>
+
+    <!-- Loader (hidden by default) -->
+    <div id="loading" class="hidden">⏳ Generating your image...</div>
+
+    <!-- Result -->
+    <div id="result"></div>
+  </div>
+
+  <!-- Script -->
+  <script src="/static/script.js"></script>
+</body>
+</html>
